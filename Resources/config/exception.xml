@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="klipper_translation.exception_translator"
+                 class="Klipper\Component\Translation\ExceptionTranslator"
+                 public="true">
+            <argument type="service" id="translator" />
+            <argument>%kernel.debug%</argument>
+        </service>
+
+        <service id="klipper_translation.exception_message_manager"
+                 class="Klipper\Component\Translation\ExceptionMessageManager"
+                 public="true">
+            <argument type="service" id="klipper_translation.exception_translator" />
+            <argument/>
+            <argument/>
+        </service>
+
+        <service id="Klipper\Component\Translation\ExceptionTranslator" alias="klipper_translation.exception_translator" />
+        <service id="Klipper\Component\Translation\ExceptionTranslatorInterface" alias="klipper_translation.exception_translator" />
+        <service id="Klipper\Component\Translation\ExceptionMessageManager" alias="klipper_translation.exception_message_manager" />
+    </services>
+</container>

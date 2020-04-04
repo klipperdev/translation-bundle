@@ -1,0 +1,32 @@
+{
+    "name": "klipper/translation-bundle",
+    "type": "symfony-bundle",
+    "description": "Translation bundle of Klipper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "François Pluchino",
+            "email": "francois.pluchino@klipper.dev"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.4.0",
+        "klipper/translation": "^2.0.0",
+        "symfony/framework-bundle": "^4.3.0",
+        "symfony/debug": "^4.3.0",
+        "symfony/translation": "^4.3.0"
+    },
+    "autoload": {
+        "psr-4": { "Klipper\\Bundle\\TranslationBundle\\": "" },
+        "exclude-from-classmap": [
+            "**/Tests/"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    }
+}
