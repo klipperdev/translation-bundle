@@ -14,9 +14,9 @@
     "require": {
         "php": "^7.4.0",
         "klipper/translation": "^2.0.0",
-        "symfony/framework-bundle": "^4.3.0",
-        "symfony/debug": "^4.3.0",
-        "symfony/translation": "^4.3.0"
+        "symfony/framework-bundle": "^4.4.0",
+        "symfony/debug": "^4.4.0",
+        "symfony/translation": "^4.4.0"
     },
     "autoload": {
         "psr-4": { "Klipper\\Bundle\\TranslationBundle\\": "" },
