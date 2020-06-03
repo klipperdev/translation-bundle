@@ -23,24 +23,13 @@ use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
  */
 class Configuration implements ConfigurationInterface
 {
-    /**
-     * Default debug mode value.
-     *
-     * @var bool
-     */
-    private $debug;
+    private bool $debug;
 
-    /**
-     * Constructor.
-     */
     public function __construct(bool $debug)
     {
         $this->debug = $debug;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('klipper_translation');

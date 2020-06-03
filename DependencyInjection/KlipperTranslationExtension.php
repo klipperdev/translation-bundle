@@ -24,8 +24,6 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class KlipperTranslationExtension extends Extension
 {
     /**
-     * {@inheritdoc}
-     *
      * @throws \Exception
      */
     public function load(array $configs, ContainerBuilder $container): void
