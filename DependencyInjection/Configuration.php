@@ -121,7 +121,10 @@ class Configuration implements ConfigurationInterface
      */
     private function testExceptionExists(string $exception): void
     {
-        if (!is_subclass_of($exception, \Exception::class) && !is_a($exception, \Exception::class, true)) {
+        if (class_exists($exception)
+            && !is_subclass_of($exception, \Exception::class)
+            && !is_a($exception, \Exception::class, true)
+        ) {
             throw new InvalidConfigurationException("KlipperTranslationBundle exception mapper: Could not load class '{$exception}' or the class does not extend from '\\Exception'. Most probably this is a configuration problem.");
         }
     }
