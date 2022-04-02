@@ -33,6 +33,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder('klipper_translation');
+
         /** @var ArrayNodeDefinition $rootNode */
         $rootNode = $treeBuilder->getRootNode();
         $rootNode
@@ -48,6 +49,7 @@ class Configuration implements ConfigurationInterface
     protected function getExceptionNode(): ArrayNodeDefinition
     {
         $treeBuilder = new TreeBuilder('exception');
+
         /** @var ArrayNodeDefinition $node */
         $node = $treeBuilder->getRootNode();
         $node
